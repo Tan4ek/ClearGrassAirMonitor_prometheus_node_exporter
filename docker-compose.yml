@@ -1,0 +1,10 @@
+version: '3'
+services:
+  air-monitor-node-exporter:
+    image: air-monitor-extractor:latest
+    container_name: air-monitor-extractor
+    ports:
+      - 5433:5433
+    volumes:
+      - ./config.ini:/usr/src/app/config.ini
+    entrypoint: [ 'python', 'src/main.py' ]
