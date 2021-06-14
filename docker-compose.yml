@@ -7,3 +7,4 @@ services:
       - 5433:5433
     volumes:
       - ./config.ini:/app/config.ini
+    restart: unless-stopped
