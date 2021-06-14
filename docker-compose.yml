@@ -1,7 +1,7 @@
 version: '3'
 services:
   air-monitor-node-exporter:
-    image: air-monitor-extractor:latest
+    image: tan4ek/clear-grass-air-monitor-node-exporter:latest
     container_name: air-monitor-extractor
     ports:
       - 5433:5433
