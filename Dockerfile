@@ -2,7 +2,7 @@ FROM python:3.13.18-slim-bookworm AS dependencies
 COPY requirements.txt .
 
 RUN apt-get update && \
-        apt-get install -y --no-install-recommends gcc libc6-dev && \
+        apt-get install -y --no-install-recommends gcc libc6-dev libffi-dev libssl-dev pkg-config && \
         rm -rf /var/lib/apt/lists/* && \
         pip install --no-cache-dir --user --no-warn-script-location -r requirements.txt
 
